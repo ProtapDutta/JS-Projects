@@ -1,6 +1,12 @@
 // Function to handle "Run" button for Sum of Digits
 function runSumOfDigit() {
     var num = prompt("Enter the number :");
+   // Validate input to ensure it's a positive integer greater than 1
+    if (isNaN(num) || num.trim() === "" || num.includes(".") ) {
+        alert("❌ Please enter a valid number.");
+        return;
+    }
+    
     var sum = 0;
     while (num > 0) {
         sum += num % 10;
@@ -12,6 +18,12 @@ function runSumOfDigit() {
 // Function to handle "Run" button for Armstrong Number
 function runArmstrongNumber() {
     var num = prompt("Enter the number :");
+
+    // Validate input to ensure it is a number
+    if (isNaN(num) || num.trim() === "" || num.includes(".")) {
+        alert("❌ Please enter a valid whole number.");
+        return;
+    }
     var sum = 0;
     var temp = num;
     var digits = num.length;
@@ -30,6 +42,12 @@ function runArmstrongNumber() {
 // Function to handle "Run" button for Prime Number
 function runPrimeNumber() {
     var num = prompt("Enter the number :");
+
+    // Validate input to ensure it's a positive integer greater than 1
+    if (isNaN(num) || num.trim() === "" || num.includes(".") ) {
+        alert("❌ Please enter a valid number.");
+        return;
+    }
     var flag = 1;
     for (let i = 2; i < num; i++) {
         if (num % i == 0) {
@@ -65,6 +83,12 @@ function showCode(task) {
     if (task == "sumOfDigit") {
         code = `<script>
         var num = prompt("Enter the number:");
+        // Validate input to ensure it's a positive integer greater than 1
+        if (isNaN(num) || num.trim() === "" || num.includes(".") ) {
+        alert("❌ Please enter a valid number.");
+        return;
+        }
+        
         var sum = 0;
         while (num > 0) {
             sum += num % 10;
@@ -75,13 +99,24 @@ function showCode(task) {
     } else if (task == "armstrongNumber") {
         code = `<script>
         var num = prompt("Enter the number:");
+
+        // Validate input to ensure it is a number
+        // num.includes(".")) Checks for decimal input
+        //(isNaN(num) ensures it's a number 
+        //num.trim() === "" prevent empty input 
+        
+        if (isNaN(num) || num.trim() === "" || num.includes(".")) {
+        alert("❌ Please enter a valid whole number.");
+        return;
+        }
+
         var sum = 0;
         var temp = num;
         var digits = num.length;
         
     while (temp > 0) {
         var digit = temp % 10;
-        sum += Math.pow(digit, digits);
+        sum += Math.pow(digit, digits); // Math.pow(base, exponent) 
         temp = parseInt(temp / 10);
         }
     if (sum == num) {
@@ -93,6 +128,12 @@ function showCode(task) {
     } else if (task == "primeNumber") {
         code = `<script>
         var num = prompt("Enter the number:");
+
+       // Validate input to ensure it's a positive integer greater than 1
+        if (isNaN(num) || num.trim() === "" || num.includes(".") ) {
+        alert("❌ Please enter a valid number.");
+        return;
+        }
         var flag = 1;
         for (let i = 2; i < num; i++) {
             if (num % i == 0) {
