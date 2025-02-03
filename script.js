@@ -47,6 +47,11 @@ function runPrimeNumber() {
 // Function to handle "Run" button for Even or Odd Number
 function runEvenOrOdd() {
     var num = prompt("Enter the number :");
+    // Check if the input is a valid number
+    if (isNaN(num) || num.trim() === "") {
+        alert("❌ Please enter a valid number.");
+        return;
+    }
     if (num % 2 == 0) {
         alert('✅' + num + " is an Even number.");
     } else {
@@ -104,6 +109,11 @@ function showCode(task) {
     } else if (task == "evenOrOdd") {
             code = `<script>
         var num = prompt("Enter the number:");
+        // Check if the input is a valid number
+        if (isNaN(num) || num.trim() === "") {
+          alert("❌ Please enter a valid number.");
+           return;
+        }
         if (num % 2 == 0) {
             alert('✅' +num + " is an Even number.");
         } else {
