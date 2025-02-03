@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript Homework</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+          rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script> <!-- Link to your external JavaScript file -->
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top px-4">
+        <a class="navbar-brand" href="#">JavaScript Practice</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">More</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" 
+                            href="https://protapdutta.github.io/wedding-tales/">Wedding Tales</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="https://protapdutta.github.io/Resume/#about">Prox21</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Card Section -->
+    <div class="container mt-5 pt-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card shadow border-0">
+                    <img src="image/sum of digit.webp" class="card-img-top" alt="Card Image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sum of Digit</h5>
+                        <p class="card-text">Automatically adds the input digits and gives sum of them.</p>
+                        <div class="btn-group mt-3">
+                            <button class="btn btn-info" onclick="runSumOfDigit()">Run</button>
+                            <button class="btn btn-warning" onclick="showCode('sumOfDigit')">Show Code</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card shadow border-0">
+                    <img src="image/armstrong number.webp" class="card-img-top" alt="Image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Armstrong Number</h5>
+                        <p class="card-text">Check a number that is equal to the sum of cubes of its digits.</p>
+                        <div class="btn-group mt-3">
+                            <button class="btn btn-info" onclick="runArmstrongNumber()">Run</button>
+                            <button class="btn btn-warning" onclick="showCode('armstrongNumber')">Show Code</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card shadow border-0">
+                    <img src="image/prime number.webp" class="card-img-top" alt="Image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Prime Number</h5>
+                        <p class="card-text">A number that can only be divided by itself and 1 without remainders.</p>
+                        <div class="btn-group">
+                            <button class="btn btn-info" onclick="runPrimeNumber()">Run</button>
+                            <button class="btn btn-warning" onclick="showCode('primeNumber')">Show Code</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card shadow border-0">
+                    <img src="image/even or odd.webp" class="card-img-top" alt="Image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Even or Odd Number</h5>
+                        <p class="card-text">Even numbers are divisible by 2, while odd numbers are not.</p>
+                        <div class="btn-group mt-3">
+                            <button class="btn btn-info" onclick="runEvenOrOdd()">Run</button>
+                            <button class="btn btn-warning" onclick="showCode('evenOrOdd')">Show Code</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal for Showing Code -->
+    <div class="modal fade" id="codeModal" tabindex="-1" aria-labelledby="codeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="codeModalLabel">Code for Selected Task</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <pre id="codeContent" class="bg-light p-3">
+                    <!-- Placeholder for code -->
+                    </pre>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="copyCode()">Copy Code</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Footer-->
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">© 2025 Prox21.</p>
+    </footer>
+    
+
+</body>
+</html>
