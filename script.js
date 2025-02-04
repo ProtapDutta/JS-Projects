@@ -160,12 +160,12 @@ function showCode(task) {
             code = `<script>
         var num = prompt("Enter the number:");
         
-        // Validate input to ensure it is a number
+        // Validate input to ensure it is a whole number
         // num.includes(".")) Checks for decimal input
         //(isNaN(num) ensures it's a number 
         //num.trim() === "" prevent empty input 
         
-        if (isNaN(num) || num.trim() === "") {
+        if (isNaN(num) || num.trim() === "" || num.includes(".") ) {
           alert("❌ Please enter a valid number.");
            return;
         }
