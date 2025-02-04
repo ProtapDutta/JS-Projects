@@ -82,13 +82,13 @@ function showCode(task) {
     var code = "";
     if (task == "sumOfDigit") {
         code = `<script>
-        var num = prompt("Enter the number:");
-        
         // Validate input to ensure it is a number
         // num.includes(".")) Checks for decimal input
         //(isNaN(num) ensures it's a number 
-        //num.trim() === "" prevent empty input 
+        //num.trim() === "" prevent empty input
         
+        var num = prompt("Enter the number:"); 
+
         if (isNaN(num) || num.trim() === "" || num.includes(".") ) {
         alert("❌ Please enter a valid number.");
         return;
@@ -103,12 +103,12 @@ function showCode(task) {
 </script>`;
     } else if (task == "armstrongNumber") {
         code = `<script>
-        var num = prompt("Enter the number:");
-
         // Validate input to ensure it is a number
         // num.includes(".")) Checks for decimal input
         //(isNaN(num) ensures it's a number 
-        //num.trim() === "" prevent empty input 
+        //num.trim() === "" prevent empty input
+        
+        var num = prompt("Enter the number:"); 
         
         if (isNaN(num) || num.trim() === "" || num.includes(".")) {
         alert("❌ Please enter a valid whole number.");
@@ -132,12 +132,12 @@ function showCode(task) {
 </script>`;
     } else if (task == "primeNumber") {
         code = `<script>
-        var num = prompt("Enter the number:");
-
-       // Validate input to ensure it is a number
+        // Validate input to ensure it is a number
         // num.includes(".")) Checks for decimal input
         //(isNaN(num) ensures it's a number 
-        //num.trim() === "" prevent empty input 
+        //num.trim() === "" prevent empty input
+        
+        var num = prompt("Enter the number:"); 
         
         if (isNaN(num) || num.trim() === "" || num.includes(".") ) {
         alert("❌ Please enter a valid number.");
@@ -158,12 +158,12 @@ function showCode(task) {
 </script>`;
     } else if (task == "evenOrOdd") {
             code = `<script>
-        var num = prompt("Enter the number:");
-        
         // Validate input to ensure it is a whole number
         // num.includes(".")) Checks for decimal input
         //(isNaN(num) ensures it's a number 
         //num.trim() === "" prevent empty input 
+        
+        var num = prompt("Enter the number:");
         
         if (isNaN(num) || num.trim() === "" || num.includes(".") ) {
           alert("❌ Please enter a valid number.");
