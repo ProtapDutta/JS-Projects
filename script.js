@@ -1,7 +1,7 @@
 // Function to handle "Run" button for Sum of Digits
 function runSumOfDigit() {
     var num = prompt("Enter the number :");
-   // Validate input to ensure it's a positive integer greater than 1
+   // Check if the input is a valid number
     if (isNaN(num) || num.trim() === "" || num.includes(".") ) {
         alert("❌ Please enter a valid number.");
         return;
@@ -43,7 +43,7 @@ function runArmstrongNumber() {
 function runPrimeNumber() {
     var num = prompt("Enter the number :");
 
-    // Validate input to ensure it's a positive integer greater than 1
+    // Check if the input is a valid number
     if (isNaN(num) || num.trim() === "" || num.includes(".") ) {
         alert("❌ Please enter a valid number.");
         return;
@@ -83,7 +83,12 @@ function showCode(task) {
     if (task == "sumOfDigit") {
         code = `<script>
         var num = prompt("Enter the number:");
-        // Validate input to ensure it's a positive integer greater than 1
+        
+        // Validate input to ensure it is a number
+        // num.includes(".")) Checks for decimal input
+        //(isNaN(num) ensures it's a number 
+        //num.trim() === "" prevent empty input 
+        
         if (isNaN(num) || num.trim() === "" || num.includes(".") ) {
         alert("❌ Please enter a valid number.");
         return;
@@ -92,7 +97,7 @@ function showCode(task) {
         var sum = 0;
         while (num > 0) {
             sum += num % 10;
-            num = parseInt(num / 10);
+            num = parseInt(num / 10); // parseInt(num) converts num into integer
         }
         alert("Sum of digits is: " + sum);
 </script>`;
@@ -117,7 +122,7 @@ function showCode(task) {
     while (temp > 0) {
         var digit = temp % 10;
         sum += Math.pow(digit, digits); // Math.pow(base, exponent) 
-        temp = parseInt(temp / 10);
+        temp = parseInt(temp / 10); // // parseInt(num) converts num into integer
         }
     if (sum == num) {
             alert('✅' +num + "  is an Armstrong number.");
@@ -129,7 +134,11 @@ function showCode(task) {
         code = `<script>
         var num = prompt("Enter the number:");
 
-       // Validate input to ensure it's a positive integer greater than 1
+       // Validate input to ensure it is a number
+        // num.includes(".")) Checks for decimal input
+        //(isNaN(num) ensures it's a number 
+        //num.trim() === "" prevent empty input 
+        
         if (isNaN(num) || num.trim() === "" || num.includes(".") ) {
         alert("❌ Please enter a valid number.");
         return;
@@ -150,7 +159,12 @@ function showCode(task) {
     } else if (task == "evenOrOdd") {
             code = `<script>
         var num = prompt("Enter the number:");
-        // Check if the input is a valid number
+        
+        // Validate input to ensure it is a number
+        // num.includes(".")) Checks for decimal input
+        //(isNaN(num) ensures it's a number 
+        //num.trim() === "" prevent empty input 
+        
         if (isNaN(num) || num.trim() === "") {
           alert("❌ Please enter a valid number.");
            return;
